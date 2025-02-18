@@ -9,19 +9,23 @@ class Slider {
     endPoint = 0;
     minMove = 50;
 
-    constructor() {
-        // this.startHandler = this.startHandler.bind(this);
-        // this.endHandler = this.endHandler.bind(this);
+    constructor(selector, arrowsStatus) {
+        this.selector = selector;
+        this.arrows = arrowsStatus;
+        this._initial();
     }
 
-    _initial(selector) {
-        this.sliderElement = document.querySelector(selector);
+    _initial() {
+        this.sliderElement = document.querySelector(this.selector);
 
         const wrapperHidden = this.#wrapperCreator();
         this.sliderElement.append(wrapperHidden);
+        console.log(this.arrows);
 
-        const { leftArrow, rightArrow } = this.#arrowsCreator();
-        this.sliderElement.append(leftArrow, rightArrow);
+        if (this.arrows) {
+            const { leftArrow, rightArrow } = this.#arrowsCreator();
+            this.sliderElement.append(leftArrow, rightArrow);
+        }
 
         const paginationWrapper = this.#paginationCreator();
         this.sliderElement.append(paginationWrapper);
@@ -56,7 +60,14 @@ class Slider {
         this.sliderElement.addEventListener("mouseup", (e) =>
             this.endHandler(e)
         );
+        this.sliderElement.addEventListener("touchstart", (e) =>
+            this.startHandler(e)
+        );
+        this.sliderElement.addEventListener("touchend", (e) =>
+            this.endHandler(e)
+        );
     }
+
     swipe() {
         const currentMove = this.startPoint - this.endPoint;
         if (Math.abs(currentMove) > this.minMove) {
@@ -69,11 +80,15 @@ class Slider {
     }
 
     startHandler(e) {
-        this.startPoint = e.clientX;
+        this.startPoint = e.type.includes("mouse")
+            ? e.clientX
+            : e.touches[0].clientX;
     }
 
     endHandler(e) {
-        this.endPoint = e.clientX;
+        this.endPoint = e.type.includes("mouse")
+            ? e.clientX
+            : e.changedTouches[0].clientX;
         this.swipe();
     }
 
@@ -160,5 +175,6 @@ class Slider {
     }
 }
 
-const ourSlider = new Slider();
-ourSlider._initial("#slider");
+const ourSlider = new Slider("#slider", false);
+console.log(Slider);
+console.log(ourSlider);
