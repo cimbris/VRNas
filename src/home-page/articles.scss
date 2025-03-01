@@ -10,7 +10,8 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        margin-bottom: 72px;
+        max-width: 1200px;
+        margin: 0 auto;
     }
     .articles__header-title {
     }
@@ -29,7 +30,8 @@
     max-width: 730px;
     width: 100%;
     position: absolute;
-    right: -100px;
+    right: -20px;
+    top: 323px;
     background-color: $black50;
     padding: 32px 72px 0 97px;
     border: 1px solid;

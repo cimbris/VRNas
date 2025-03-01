@@ -162,13 +162,16 @@ class Slider {
 
         for (let i = 0; i < this.sliderAmount; i++) {
             const paginationBtn = document.createElement("button");
+            const labelBtn = document.createElement("label");
 
             if (i === 0) {
                 paginationBtn.classList.add("active");
             }
             paginationBtn.classList.add("pagination-btn");
+            labelBtn.classList.add("label-btn");
             paginationBtn.setAttribute("data-pagination", "");
-            paginationWrapper.append(paginationBtn);
+            labelBtn.append(paginationBtn);
+            paginationWrapper.append(labelBtn);
         }
 
         return paginationWrapper;
@@ -176,5 +179,4 @@ class Slider {
 }
 
 const ourSlider = new Slider("#slider", false);
-console.log(Slider);
 console.log(ourSlider);
