@@ -27,6 +27,12 @@
     display: flex;
     gap: 8px;
     align-items: center;
+
+    &:hover {
+        .newsletter__input::placeholder {
+            color: rgba(255, 255, 255, 0.574);
+        }
+    }
 }
 
 .newsletter__form {
@@ -38,16 +44,14 @@
     justify-content: space-between;
     max-height: 56px;
     align-items: center;
-    padding: 4px 4px 4px 14px;
-
-    &:hover {
-        .newsletter__input::placeholder {
-            color: rgba(255, 255, 255, 0.574);
-        }
-    }
+    padding: 4px 1px 4px 14px;
 
     &:has(input:focus) {
         border: 1px solid $white;
+
+        .newsletter__input::placeholder {
+            color: rgba(255, 255, 255, 0.574);
+        }
     }
 }
 .newsletter__icon {
@@ -82,4 +86,10 @@
     background-image: url(../img/banner/Send.svg);
     background-repeat: no-repeat;
     background-position: center;
+    transition: 300ms;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.447);
+    }
 }
