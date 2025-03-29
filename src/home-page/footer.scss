@@ -1,6 +1,7 @@
 @import "../common-styles/vars.scss";
 
 .footer {
+    position: relative;
     padding-top: 182px;
     &__content {
         max-width: 1193px;

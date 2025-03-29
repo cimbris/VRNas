@@ -10,6 +10,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Chakra Petch", system-ui;
+    min-height: 100vh;
+    position: relative;
 }
 
 * > *,
@@ -72,6 +74,10 @@ a {
     left: 0;
     top: 160px;
     z-index: -1;
+
+    &--bottom {
+        top: -510px;
+    }
 }
 
 .section-title {

@@ -66,6 +66,13 @@
     width: 736px;
     height: 353.2px;
     z-index: -1;
+
+    &--footer {
+        transform: rotate(-180deg);
+        bottom: 0;
+        top: auto;
+        left: 0;
+    }
 }
 
 .sublist-wrapper {
