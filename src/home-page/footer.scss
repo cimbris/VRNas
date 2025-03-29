@@ -1,0 +1,127 @@
+@import "../common-styles/vars.scss";
+
+.footer {
+    padding-top: 182px;
+    &__content {
+        max-width: 1193px;
+        margin: 0 auto;
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 33px;
+    border-bottom: 1px solid #fff;
+    border-image: linear-gradient(
+        90deg,
+        rgb(12, 186, 241) 0%,
+        rgb(233, 92, 233) 100%
+    );
+    border-image-slice: 1;
+
+    &__list {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__item {
+        background-image: url(../img/footer/BG.svg);
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.social-link {
+    display: flex;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+
+    &__item {
+        width: 18px;
+        height: auto;
+        transition: 300ms;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+.links-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.links-list-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.75;
+    color: $white;
+}
+
+.useful-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    &__item {
+    }
+
+    &--contacts {
+        .useful-link {
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 20px;
+                vertical-align: middle;
+                margin-right: 8px;
+                height: 20px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+
+            &--loc {
+                &::before {
+                    background-image: url(../img/footer/loc.svg);
+                }
+            }
+
+            &--mail {
+                &::before {
+                    background-image: url(../img/footer/msg.png);
+                }
+            }
+
+            &--phone {
+                &::before {
+                    background-image: url(../img/footer/phone.png);
+                }
+            }
+        }
+    }
+}
+
+.useful-link {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.75;
+    color: $white;
+}
+
+.copyright {
+    text-align: center;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.75;
+    color: $white;
+    padding: 32px 0;
+}
