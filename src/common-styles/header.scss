@@ -1,3 +1,5 @@
+@import "./vars.scss";
+
 .header {
     &__content {
         padding: 31px 0;
@@ -14,6 +16,10 @@
     &__list {
         display: flex;
         gap: 64px;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 
     &__item {
@@ -102,4 +108,51 @@
     &__item:not(:last-child) {
         margin-bottom: 8px;
     }
+}
+
+.burger {
+    display: none;
+
+    @media (max-width: 768px) {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        justify-content: center;
+        padding: 14px;
+        gap: 4px;
+        background-color: transparent;
+        border: 1px solid;
+
+        border-image: linear-gradient(
+            90deg,
+            rgb(12, 186, 241) 0%,
+            rgb(233, 92, 233) 100%
+        );
+        border-image-slice: 1;
+    }
+}
+
+.burger__line {
+    display: block;
+    background-color: $white;
+}
+
+.burger__line--top {
+    width: 20px;
+    height: 2px;
+}
+
+.burger__line--mid {
+    width: 13px;
+    height: 2px;
+}
+
+.burger__line--bottom {
+    width: 7px;
+    height: 2px;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 20px;
 }
