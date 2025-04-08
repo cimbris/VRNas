@@ -33,6 +33,7 @@
 
     &__item {
         position: relative;
+        transition: 300ms;
 
         &--button {
             display: none;
@@ -62,6 +63,13 @@
         }
         .anchor-link--add::after {
             transform: translateY(-50%) rotateX(180deg);
+        }
+
+        @media (max-width: 768px) {
+            & + .menu__item,
+            & + .menu__item + .menu__item {
+                transform: translateY(140px);
+            }
         }
     }
 }
