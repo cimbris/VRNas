@@ -15,6 +15,11 @@
     &__prom {
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 1020px) {
+            flex-direction: column;
+            gap: 145px;
+        }
     }
 
     &__desc {
@@ -144,4 +149,25 @@
             rgba(254, 105, 254, 0.8) 90.69%
         );
     }
+
+    @media (max-width: 1020px) {
+        width: 60%;
+        // height: 422px;
+        align-self: flex-end;
+        position: absolute;
+        bottom: 0;
+        right: -120px;
+        z-index: -1;
+    }
+
+    @media (max-width: 660px) {
+        width: 370px;
+        height: 446px;
+    }
+}
+
+.character__pic {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
