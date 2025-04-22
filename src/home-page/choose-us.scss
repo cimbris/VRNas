@@ -2,6 +2,7 @@
 
 .choose-us {
     padding-bottom: 120px;
+
     &__content {
         max-width: 1200px;
         margin: 0 auto;
@@ -14,6 +15,10 @@
         );
         border-image-slice: 1;
         padding: 42px 64px 53px;
+
+        @media (max-width: 768px) {
+            padding: 42px 20px 53px;
+        }
     }
 }
 
@@ -23,11 +28,19 @@
 
     &__item {
     }
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+    }
 }
 
 .reason-card {
     &__img {
         margin-bottom: 42px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 12px;
+        }
     }
     &__title {
         margin-bottom: 12px;
