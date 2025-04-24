@@ -37,6 +37,10 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 46px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 }
 .our-service__titles {
     .section-title {
@@ -46,8 +50,28 @@
 }
 .service-card-list {
     display: flex;
+    gap: 30px;
+
+    @media (max-width: 1260px) {
+        flex-direction: column;
+    }
+
+    @media (max-width: 768px) {
+    }
 
     &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        @media (max-width: 1260px) {
+            flex-direction: row;
+        }
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
     }
 }
 .service-card {
@@ -63,6 +87,13 @@
         rgba(176, 176, 178, 0) 100%
     );
     border-image-slice: 1;
+
+    @media (max-width: 1260px) {
+        flex-grow: 6;
+    }
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 
     &::before {
         content: "";
@@ -131,7 +162,9 @@
     }
 
     &--top {
-        margin-bottom: 30px;
+        @media (max-width: 1260px) {
+            flex-grow: 1;
+        }
     }
 }
 .wrapper {
@@ -141,9 +174,21 @@
 .service-card-list__item {
     &--second {
         transform: translateY(90px);
+
+        @media (max-width: 1260px) {
+            flex-direction: row-reverse;
+            transform: none;
+        }
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
     }
 
     &--third {
         transform: translateY(190px);
+
+        @media (max-width: 1260px) {
+            transform: none;
+        }
     }
 }
