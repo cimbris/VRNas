@@ -5,6 +5,10 @@
     flex-direction: column;
     gap: 48px;
 
+    @media (max-width: 768px) {
+        gap: 17px;
+    }
+
     &--advantages {
         max-width: 548px;
         width: 100%;
@@ -23,6 +27,10 @@
         line-height: 1.3;
         color: $white;
         border-bottom: 1px solid rgba(255, 255, 255, 0.351);
+
+        @media (max-width: 425px) {
+            font-size: 18px;
+        }
 
         &::after {
             content: "";
@@ -50,6 +58,10 @@
         .section-text {
             height: 112px;
             transition: height 0.4s;
+
+            @media (max-width: 768px) {
+                height: 200px;
+            }
         }
 
         .accordeon__title::after {

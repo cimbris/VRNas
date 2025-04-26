@@ -2,6 +2,7 @@
 
 .our-advantages {
     margin-bottom: 150px;
+    overflow: hidden;
 
     &__content {
         display: flex;
@@ -9,28 +10,34 @@
         align-items: center;
         max-width: 1301px;
         margin: 0 auto;
+        gap: 30px;
+
+        @media (max-width: 1024px) {
+            flex-direction: column-reverse;
+        }
     }
     &__desc {
         max-width: 546px;
     }
     &__main {
+        flex-shrink: 0;
     }
 
     &__preview {
         display: flex;
-        width: 608px;
-        height: 699px;
+        max-width: 608px;
+        // height: 699px;
         position: relative;
 
         &:after {
             content: "";
             display: block;
             position: absolute;
-            bottom: 35px;
+            bottom: 2px;
             left: 65px;
             background-color: $black50;
-            width: 399px;
-            height: 496.5px;
+            width: 67%;
+            height: 71%;
             z-index: -2;
         }
 
@@ -81,4 +88,8 @@
             }
         }
     }
+}
+.our-advantages__image {
+    width: 100%;
+    object-fit: cover;
 }
