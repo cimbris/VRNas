@@ -1,7 +1,6 @@
 @import "../common-styles/vars.scss";
 
 .our-advantages {
-    margin-bottom: 150px;
     overflow: hidden;
 
     &__content {
@@ -11,6 +10,8 @@
         max-width: 1301px;
         margin: 0 auto;
         gap: 30px;
+        padding-top: 75px;
+        padding-bottom: 140px;
 
         @media (max-width: 1024px) {
             flex-direction: column-reverse;
@@ -72,6 +73,11 @@
         position: absolute;
         bottom: 0;
         right: 120px;
+
+        @media (max-width: 550px) {
+            right: 30px;
+            bottom: -10px;
+        }
 
         &__preview {
             width: 100%;
