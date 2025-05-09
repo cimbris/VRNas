@@ -25,3 +25,4 @@ import "./home-page/banner.scss";
 import "./home-page/footer.scss";
 import "./common-scripts/burger.js";
 import "./common-scripts/animations.js";
+import "./common-scripts/video.js";
