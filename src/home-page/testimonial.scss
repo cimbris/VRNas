@@ -4,10 +4,16 @@
     padding-bottom: 100px;
     &__content {
         position: relative;
-        background-image: url(../img/main-page/TESTIMONIAL.png);
-        background-repeat: no-repeat;
-        background-position: center;
+        // background-image: url(../img/main-page/TESTIMONIAL.png);
+        // background-repeat: no-repeat;
+        // background-position: center;
         height: 1247px;
+        z-index: 3;
+
+        @media (max-width: 1630px) {
+            width: 90%;
+            margin: 0 auto;
+        }
     }
 
     &__header {
@@ -43,5 +49,11 @@
             border-radius: 88% 12% 88% 12% / 20% 37% 63% 80%;
             transform: translate(-50%, -50%) rotate(-30deg);
         }
+    }
+
+    .container {
+        background-image: url(../img/main-page/TESTIMONIAL.png);
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }

@@ -14,7 +14,7 @@ import "./home-page/advantages.scss";
 import "./home-page/get-started.scss";
 import "./home-page/testimonial.scss";
 import "./home-page/heads.scss";
-// import "./common-scripts/heads.js";
+import "./common-scripts/heads.js";
 import "./home-page/pricing.scss";
 import "./home-page/partners.scss";
 import "./common-styles/keyframes.scss";
