@@ -52,8 +52,14 @@
     }
 
     .container {
-        background-image: url(../img/main-page/TESTIMONIAL.png);
+        background-image: url(../img/main-page/bg-testimonial.webp);
         background-repeat: no-repeat;
         background-position: center;
+        background-size: contain;
+
+        @media (max-width: 750px) {
+            background-size: 160%;
+            overflow-x: hidden;
+        }
     }
 }
