@@ -2,6 +2,8 @@
 
 .pricing {
     padding-bottom: 198px;
+    overflow-x: hidden;
+
     &__content {
         max-width: 1200px;
         margin: 0 auto;
@@ -18,12 +20,12 @@
             font-weight: 400;
             font-size: 16px;
             line-height: 1.75;
-            width: 625px;
+            max-width: 625px;
             color: $grey1;
         }
     }
     &__main {
-        padding: 41px 0 41px 42px;
+        padding: 42px;
         display: flex;
         border: 1px solid;
         border-image: linear-gradient(
@@ -52,6 +54,11 @@
             border-radius: 88% 12% 88% 12% / 20% 37% 63% 80%;
             transform: translate(-50%, -50%) rotate(-8deg);
         }
+        @media (max-width: 1240px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
     }
 }
 .offers-list {
@@ -63,6 +70,13 @@
     border-right: 1px solid $borderColor;
 
     &__item {
+    }
+
+    @media (max-width: 1240px) {
+        border-right: none;
+        border-bottom: 1px solid $borderColor;
+        padding: 0;
+        padding-bottom: 48px;
     }
 }
 .offer {
@@ -88,6 +102,10 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    @media (max-width: 1240px) {
+        position: relative;
+        bottom: -40px;
+    }
 }
 
 .price-card {
@@ -127,5 +145,10 @@
         line-height: 1.6;
         color: $grey1;
         margin-top: 14px;
+    }
+    @media (max-width: 1240px) {
+        left: 40%;
+        transform: translate(-50%, 0);
+        width: 60%;
     }
 }
