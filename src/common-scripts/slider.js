@@ -138,6 +138,7 @@ class Slider {
         this.lenta = document.createElement("div");
         this.lenta.classList.add("lenta");
         this.sliderAmount = this.sliderElement.children.length;
+        // this.currentSlideWidth = this.sliderElement.children[0].offsetWidth;
         this.currentSlideWidth = this.sliderElement.children[0].offsetWidth;
         this.lenta.append(...this.sliderElement.children);
         wrapperHidden.append(this.lenta);

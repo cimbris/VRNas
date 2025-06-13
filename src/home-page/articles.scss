@@ -1,6 +1,7 @@
 @import "../common-styles/vars.scss";
 
 .articles {
+    max-width: 1460px;
     .articles__content {
         position: relative;
         padding: 150px 0;
@@ -30,7 +31,7 @@
     max-width: 730px;
     width: 100%;
     position: absolute;
-    right: -20px;
+    right: 0;
     top: 323px;
     background-color: $black50;
     padding: 32px 72px 0 97px;
@@ -58,6 +59,12 @@
         }
     }
     .recent-articles__list-item {
+    }
+    @media (max-width: 1420px) {
+        position: static;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 90%;
     }
 }
 

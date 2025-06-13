@@ -19,6 +19,16 @@
         filter: blur(105px);
         border-radius: 88% 12% 88% 12% / 20% 37% 63% 80%;
     }
+
+    @media (max-width: 1420px) {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin: 50px auto;
+    }
 }
 
 .slider {
@@ -27,6 +37,10 @@
     position: relative;
     background-color: rgb(48, 48, 44);
     z-index: 2;
+    @media (max-width: 1420px) {
+        width: 100%;
+        margin: 0 auto;
+    }
 }
 
 .wrapper-hidden {
@@ -67,6 +81,11 @@
     }
     &--4 {
         background-image: url(../img/articles/04.webp);
+    }
+
+    @media (max-width: 1420px) {
+        width: 90%;
+        margin: 0 auto;
     }
 }
 

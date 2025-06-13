@@ -39,4 +39,9 @@
         font-family: "Chakra Petch", sans-serif;
         font-size: 16px;
     }
+
+    @media (max-width: 868px) {
+        min-width: 40px;
+        height: 40px;
+    }
 }
